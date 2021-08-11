@@ -1,7 +1,16 @@
-let a = 100
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let count = 0
 
-if (a%2 == 0){
-    return console.log("Genap");
+function increment() {
+    count += 1
+    countEl.textContent = count
 }
-return console.log("Ganjil")
+
+function save() {
+    let countStr = count + " - "
+    saveEl.textContent += countStr
+    countEl.textContent = 0;
+    count = 0;
+}
 
